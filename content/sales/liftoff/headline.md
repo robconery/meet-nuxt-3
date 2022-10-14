@@ -1,6 +1,6 @@
 ---
 title: "Living on the ground is for chumps! Learn how you can rise above the noise with our Johnny Liftoff Boots."
-image: "products/liftoff.jpg"
+image: "/img/johnny-liftoff.jpg"
 slug: "headline"
 --- 
 
