@@ -56,4 +56,8 @@ await store.loadOffers(route.params.sku);
 
 const offers = store.offers;
 const page = store.salesPage;
+const {$seo} = useNuxtApp();
+const head = $seo(page.solution);
+useHead(head);
+//console.log($seo(page));
 </script>

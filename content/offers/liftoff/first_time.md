@@ -2,9 +2,11 @@
 title: "Get Off the Ground With Your First Pair of Liftoffs - 40% off!"
 price: 499.00
 discount: 300.00
-sku: liftoff
+sku: johnny-liftoff
 slug: liftoff-first
-cta: "Get Flying! $499"
+image: "/img/johnny-liftoff.jpg"
+cta: "Get Flying!"
+weight: 35
 ---
 
 You need a flying boot that's safe as well as affordable - that's why we're offering Johnny Liftoff Boots today at a hefty 40% discount. Not only that, **you'll get 3 flying lessons on us** from our expert instructors.

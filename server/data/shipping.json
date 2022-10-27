@@ -1,0 +1,18 @@
+[
+    {
+      "rate": 5.00,
+      "name": "Ground" 
+    },
+    {
+      "rate": 15.00,
+      "name": "Second Day Delivery" 
+    },
+    {
+      "rate": 35.00,
+      "name": "Immediate Drone Delivery" 
+    },
+    {
+      "rate": 5635.00,
+      "name": "Interplanetary Delivery" 
+    }
+] 
