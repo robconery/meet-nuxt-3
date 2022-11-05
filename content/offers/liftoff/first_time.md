@@ -2,8 +2,8 @@
 title: "Get Off the Ground With Your First Pair of Liftoffs - 40% off!"
 price: 499.00
 discount: 300.00
-sku: johnny-liftoff
-slug: liftoff-first
+sku: liftoff
+slug: first_time
 image: "/img/johnny-liftoff.jpg"
 cta: "Get Flying!"
 weight: 35

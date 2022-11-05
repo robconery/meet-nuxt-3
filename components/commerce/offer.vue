@@ -9,7 +9,7 @@
       </h1>
       <p class="leading-relaxed mb-3">{{offer.description}}</p>
       <div class="flex items-center flex-wrap ">
-        <HeroButton :link="`/checkout/${offer.slug}`">
+        <HeroButton :link="`/checkout/${offer.sku}/${offer.slug}`">
           {{offer.cta}}
         </HeroButton>
       </div>

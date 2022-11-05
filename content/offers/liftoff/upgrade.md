@@ -2,8 +2,8 @@
 title: "Our Johnny Liftoff Boots at 20% Off, Along with Expert Fitting"
 price: 599.00
 discount: 200.00
-sku: johnny-liftoff
-slug: liftoff-upgrade
+sku: liftoff
+slug: upgrade
 image: "/img/johnny-liftoff.jpg"
 cta: "Make a Change!"
 weight: 35

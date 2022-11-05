@@ -1,6 +1,6 @@
 <template>
   <div class="leading-loose">
-  <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
+  <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl" @submit.prevent="runCheckout">
     <p class="text-gray-800 font-medium">Billing information</p>
     <div class="">
       <input class="form-input" placeholder="Name" v-model="billing.name">
@@ -18,7 +18,7 @@
     <p class="text-gray-800 font-medium">Shipping</p>
     <div class="mt-2">
       <select class="px-4 py-3 rounded" v-model="shipping.rate">
-        <option v-for="(rate,idx) in rates" 
+        <option v-for="(rate,idx) in calculateRates()" 
                 :key="idx" 
                 :value="rate.rate">
                   {{rate.name}}: ${{rate.rate}}.00
@@ -61,19 +61,42 @@
 import { useSalesStore } from "@/stores/sales.js";
 import { useCheckoutStore } from "@/stores/checkout.js";
 
+onMounted(()=> {
+  console.log("HEY, I'm Called!");
+})
+
+const runCheckout = async function(){
+  //run client side validation
+  //call out to Stripe to verify card/customer
+  //hand the resulting charge information to our server
+  //redirect to a thank you page
+  //alert("Order Submitted!")
+  console.log(checkoutStore.order);
+}
+
 const salesStore = useSalesStore();
 const checkoutStore = useCheckoutStore();
 const billing = checkoutStore.order.billing;
 const shipping = checkoutStore.order.shipping;
 
+//HACK: this needs to be in a serverless function
+const calculateRates = function(){
+  const rates = [];
+  //get the weight from the offer
+  const weight = salesStore.offer.weight;
+  for(let rate of checkoutStore.shipping){
+    rates.push({
+      name: rate.name,
+      rate: rate.rate,
+      cost: rate.rate * weight
+    });
+  }
+ return rates;
+}
+
 const cta = computed(() => {
   return `${salesStore.offer.cta} $${checkoutStore.order.total}.00`
 });
-
-const {data} = await useFetch("/api/shipping");
-const rates = data;
-
-
 </script>
 
 <style>

@@ -4,7 +4,6 @@ export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.provide("seo", function(page) {
     const config = useAppConfig();
     const title = `${config.title} | ${page.title}`;
-    console.log(title);
     const route = useRoute();
     return {
       title: title,

@@ -10,16 +10,31 @@ export const useCheckoutStore = defineStore("checkout", () => {
   });
 
   // no need for reactiveness here
-  const shipping = [];
+  const shipping = [
+    {
+      "rate": 5.00,
+      "name": "Ground" 
+    },
+    {
+      "rate": 15.00,
+      "name": "Second Day Delivery" 
+    },
+    {
+      "rate": 35.00,
+      "name": "Immediate Drone Delivery" 
+    },
+    {
+      "rate": 5635.00,
+      "name": "Interplanetary Delivery" 
+    }
+] ;
 
   async function prepareOrder(offer, sku){
-    console.log("Running preorder");
     //get the shipping rates
-    const rates = await axios.post('http://localhost:3000/api/shipping', {sku: sku});
-    this.shipping = rates.data;
     this.order.offer = offer.slug;
-    this.order.shipping.rate = rates.data[0].cost;
+    this.order.shipping.rate = this.shipping[0].rate;
     this.order.total = computed(() => offer.price + this.order.shipping.rate);
+  
   }
 
   return {order, shipping, prepareOrder}

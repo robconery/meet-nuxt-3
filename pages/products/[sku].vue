@@ -59,5 +59,5 @@ const page = store.salesPage;
 const {$seo} = useNuxtApp();
 const head = $seo(page.solution);
 useHead(head);
-//console.log($seo(page));
+
 </script>
