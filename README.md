@@ -1,43 +1,7 @@
-# Nuxt 3 Minimal Starter
+# Meet Nuxt 3 Demo Code
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+This repository includes the code for the book and videos for Meet Nuxt 3. You can checkout branches as you read along, but remember that coding yourself is the fastest way to learn!
 
-## Setup
+## Running Nuxt
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
-curl -i -X POST -H 'Content-Type: application/json' -d '{"sku": "johnny-liftoff", "offer": "first_time", "charge": 899.00, "shippingRate": "drone"}' http://localhost:3000/api/checkout
+All the tasks required for running Nuxt are in `package.json`, including the instructions for running in development and production.
